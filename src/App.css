@@ -1,0 +1,88 @@
+.App {
+  text-align: center;
+}
+
+/* Additional app-specific styles */
+.mystery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  max-width: 32rem;
+  margin: 0 auto;
+}
+
+.mystery-block {
+  aspect-ratio: 1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.mystery-block:hover {
+  transform: scale(1.05);
+}
+
+.mystery-block.revealed {
+  background: linear-gradient(135deg, #10b981, #3b82f6);
+  box-shadow: 0 10px 25px rgba(16, 185, 129, 0.25);
+}
+
+.mystery-block.in-progress {
+  background: linear-gradient(135deg, #f59e0b, #f97316);
+  box-shadow: 0 10px 25px rgba(245, 158, 11, 0.25);
+}
+
+.mystery-block.locked {
+  background: linear-gradient(135deg, #6b7280, #374151);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.visualization-container {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 0.5rem;
+  padding: 2rem;
+}
+
+.code-display {
+  background: #1f2937;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-family: "Courier New", monospace;
+  font-size: 0.875rem;
+  overflow-x: auto;
+}
+
+.array-element {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  border: 2px solid;
+  border-radius: 0.5rem;
+  transition: all 0.5s ease;
+}
+
+.array-element.active {
+  border-color: #fbbf24;
+  background-color: rgba(251, 191, 36, 0.2);
+  transform: scale(1.1);
+}
+
+.array-element.completed {
+  border-color: #10b981;
+  background-color: rgba(16, 185, 129, 0.2);
+}
+
+.array-element.default {
+  border-color: #6b7280;
+  background-color: #374151;
+}
