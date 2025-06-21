@@ -2172,6 +2172,49 @@ function VisualizationComponent({ type }: { type?: string }) {
   }
 }
 
+/* ------------------------------------------------------------------ */
+/* 🔧  Placeholder visual-demo components                            */
+/* ------------------------------------------------------------------ */
+function ConditionalVisualization() {
+  return <div className="text-white">Conditional visualisation coming soon!</div>
+}
+function FunctionVisualization() {
+  return <div className="text-white">Function execution demo coming soon!</div>
+}
+function ParametersArgumentsVisualization() {
+  return <div className="text-white">Parameters &amp; arguments demo coming soon!</div>
+}
+function ReturnValuesVisualization() {
+  return <div className="text-white">Return-values demo coming soon!</div>
+}
+function ObjectVisualization() {
+  return <div className="text-white">Object creation/properties demo coming soon!</div>
+}
+function ObjectPropertiesVisualization() {
+  return <div className="text-white">Object-properties demo coming soon!</div>
+}
+function ObjectMethodsVisualization() {
+  return <div className="text-white">Object-methods demo coming soon!</div>
+}
+function SwitchCasesVisualization() {
+  return <div className="text-white">Switch-cases visualisation coming soon!</div>
+}
+function TernaryOperatorVisualization() {
+  return <div className="text-white">Ternary-operator demo coming soon!</div>
+}
+function RecursionVisualization() {
+  return <div className="text-white">Recursion stack demo coming soon!</div>
+}
+function RecursiveCaseVisualization() {
+  return <div className="text-white">Recursive-case demo coming soon!</div>
+}
+function StackOverflowVisualization() {
+  return <div className="text-white">Stack-overflow demo coming soon!</div>
+}
+function HashSearchVisualization() {
+  return <div className="text-white">Hash-search demo coming soon!</div>
+}
+
 function CodingGame({ challenge, onComplete, onBack }) {
   const [userCode, setUserCode] = useState(challenge.starterCode || "")
   const [output, setOutput] = useState("")
@@ -4229,55 +4272,4 @@ function StringComparisonVisualization() {
     startsWith: {
       name: "Starts With",
       operation: (s1, s2) => s1.startsWith(s2),
-      description: "Checks if first string starts with second string",
-    },
-    endsWith: {
-      name: "Ends With",
-      operation: (s1, s2) => s1.endsWith(s2),
-      description: "Checks if first string ends with second string",
-    },
-    caseInsensitive: {
-      name: "Case Insensitive",
-      operation: (s1, s2) => s1.toLowerCase() === s2.toLowerCase(),
-      description: "Compares strings ignoring case differences",
-    },
-  }
-
-  const performComparison = () => {
-    setIsComparing(true)
-    setTimeout(() => {
-      const comparison = comparisonTypes[comparisonType]
-      const comparisonResult = comparison.operation(string1, string2)
-      setResult(comparisonResult)
-      setIsComparing(false)
-    }, 1000)
-  }
-
-  const currentComparison = comparisonTypes[comparisonType]
-
-  return (
-    <div className="space-y-4">
-      <div className="text-center">
-        <h4 className="text-white mb-4">String Comparison Playground</h4>
-
-        <div className="mb-4 space-y-2">
-          <input
-            type="text"
-            value={string1}
-            onChange={(e) => setString1(e.target.value)}
-            className="bg-gray-800 text-white p-2 rounded border border-gray-600 mr-2"
-            placeholder="First string"
-          />
-          <input
-            type="text"
-            value={string2}
-            onChange={(e) => setString2(e.target.value)}
-            className="bg-gray-800 text-white p-2 rounded border border-gray-600"
-            placeholder="Second string"
-          />
-        </div>
-
-        <div className="mb-4">
-          <select
-            value={comparisonType}
-            onChange={(e)
+      description: "Checks if first string starts with\
